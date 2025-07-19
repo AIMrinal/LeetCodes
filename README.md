@@ -195,6 +195,10 @@ This repo tracks my journey solving algorithm and data structure problems across
 
 ---
 
+<p align="center">
+  <img src="leetcode_progress.gif" alt="LeetCode Progress Animation" width="600" />
+</p>
+
 ## 🚀 Goals & Milestones
 
 * ✅ **100 Problems in 100 Days**
