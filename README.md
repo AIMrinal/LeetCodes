@@ -109,7 +109,7 @@ This repo tracks my journey solving algorithm and data structure problems across
 
 ---
 
-### 🟥 3. Dynamic Programming (18 Problems)
+### 🟥 3. Dynamic Programming (19 Problems)
 
 * Fibonacci Number
 * N-th Tribonacci Number
@@ -129,6 +129,7 @@ This repo tracks my journey solving algorithm and data structure problems across
 * House Robber
 * House Robber II
 * Maximum Product Subarray
+* Word Break
 
 ---
 
