@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://leetcode.com/YOUR_USERNAME" target="_blank">
+  <a href="https://leetcode.com/u/Mrinal1918" target="_blank">
     <img src="https://img.shields.io/badge/LeetCode-Profile-orange?style=for-the-badge&logo=leetcode" />
   </a>
   <img src="https://img.shields.io/badge/Problems%20Solved-93-blue?style=for-the-badge" />
@@ -31,7 +31,7 @@ This repo tracks my journey solving algorithm and data structure problems across
 
 ## 📂 Folder Structure
 
-
+```bash
 📁 root/
 ├── binary-search/
 │   └── find-first-and-last-position.py
@@ -44,8 +44,6 @@ This repo tracks my journey solving algorithm and data structure problems across
 ├── binary-tree/
 │   └── same-tree.py
 ...
-
-
 ---
 
 ## 📁 Problem Categories & Progress
