@@ -1,12 +1,12 @@
 ## 🚀 Index
 
 <p align="center">
-  <!-- A little “scroll” animation to draw the eye -->
-  <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" width="120" alt="scroll down" />
+  <!-- Quirky “let’s dive in” rocket launch -->
+  <img src="https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif" width="120" alt="rocket launch" />
 </p>
 
 ### 🟨 Arrays (35 Problems)  
-<img src="https://media.giphy.com/media/l0MYydaXoY2RYtmdC/giphy.gif" width="40" alt="arrays animation" style="vertical-align:middle"/>  
+<img src="https://media.giphy.com/media/3oEduSbSGpGaRX2Vri/giphy.gif" width="40" alt="spinning puzzle pieces" style="vertical-align:middle"/>
 
 * Concatenation of Array  
 * Contains Duplicate  
