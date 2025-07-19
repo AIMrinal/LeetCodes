@@ -2,7 +2,8 @@ import json
 import matplotlib.pyplot as plt
 from celluloid import Camera
 
-plt.rcParams['font.family'] = 'DejaVu Sans'
+# Use a font that contains color emoji glyphs
+plt.rcParams['font.family'] = 'Noto Color Emoji'
 
 with open('progress.json', 'r') as f:
     data = json.load(f)
@@ -10,7 +11,7 @@ with open('progress.json', 'r') as f:
 categories = list(data.keys())
 final_counts = list(data.values())
 
-# ✅ Safety check
+# Safety check
 if not categories or max(final_counts) == 0:
     raise ValueError("No progress data found in progress.json or all values are 0.")
 
@@ -24,10 +25,13 @@ for step in range(1, max(final_counts) + 1):
     for i in range(len(problems_solved)):
         if problems_solved[i] < final_counts[i]:
             problems_solved[i] += 1
-    # ❌ Don't clear the axes here
+
     bars = ax.barh(categories, problems_solved, color='mediumslateblue')
     ax.set_xlim(0, max(final_counts) + 5)
-    ax.set_title(f'🏁 LeetCode Progress Race! 🧠🔥 Total Solved: {sum(problems_solved)}', fontsize=16)
+    ax.set_title(
+        f'🏁 LeetCode Progress Race! 🧠🔥 Total Solved: {sum(problems_solved)}',
+        fontsize=16
+    )
     ax.set_xlabel("Problems Solved")
 
     for i, value in enumerate(problems_solved):
@@ -36,4 +40,5 @@ for step in range(1, max(final_counts) + 1):
     camera.snap()
 
 animation = camera.animate(interval=200)
-animation.save('leetcode_progress.gif', writer='pillow')
+# Use ImageMagick writer to preserve true-color & emoji
+animation.save('leetcode_progress.gif', writer='imagemagick')
