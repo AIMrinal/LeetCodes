@@ -13,9 +13,15 @@ permissions:
 jobs:
   generate-gif:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Install system deps (ImageMagick + emoji font)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick fonts-noto-color-emoji
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -28,7 +34,7 @@ jobs:
       - name: Generate progress GIF
         run: python DashboardScript/generate_progress_gif.py
 
-      - name: Commit and push updated gif
+      - name: Commit and push updated GIF
         run: |
           git config --global user.name "LeetCode Bot"
           git config --global user.email "bot@example.com"
