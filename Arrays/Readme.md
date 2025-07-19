@@ -2,7 +2,7 @@
 
 <p align="center">
   <!-- Quirky “let’s dive in” rocket launch -->
-  <img src="https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif" width="120" alt="rocket launch" />
+  <img src="[https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTZ4cjIxbzF3M2swNGVqcWp0eGNueG8wdGc0bnIwdHhxcDFvbTU0cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6FWpozKBgrQD4MZwDC/giphy.gif)" width="120" alt="rocket launch" />
 </p>
 
 ### 🟨 Arrays (35 Problems)  
