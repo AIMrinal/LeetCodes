@@ -24,7 +24,7 @@ for step in range(1, max(final_counts) + 1):
     for i in range(len(problems_solved)):
         if problems_solved[i] < final_counts[i]:
             problems_solved[i] += 1
-    ax.clear()
+    # ❌ Don't clear the axes here
     bars = ax.barh(categories, problems_solved, color='mediumslateblue')
     ax.set_xlim(0, max(final_counts) + 5)
     ax.set_title(f'🏁 LeetCode Progress Race! 🧠🔥 Total Solved: {sum(problems_solved)}', fontsize=16)
@@ -36,6 +36,4 @@ for step in range(1, max(final_counts) + 1):
     camera.snap()
 
 animation = camera.animate(interval=200)
-
-# ✅ Final save
 animation.save('leetcode_progress.gif', writer='pillow')
