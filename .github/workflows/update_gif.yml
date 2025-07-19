@@ -23,7 +23,7 @@ jobs:
         run: pip install matplotlib pillow celluloid
 
       - name: Run progress animation script
-        run: python scripts/generate_progress_gif.py
+        run: python DashboardScript/generate_progress_gif.py
 
       - name: Commit and push updated gif
         run: |
