@@ -41,4 +41,5 @@ jobs:
           git config --global user.email "bot@example.com"
           git add leetcode_progress.gif
           git commit -m "🤖 Auto-update LeetCode progress GIF" || echo "No changes to commit"
+          git pull --rebase origin main  # ✅ Fix: sync with remote before pushing
           git push
