@@ -7,7 +7,7 @@
 
 ### 🟨 Arrays (35 Problems) 
 
-* [Concatenation of Array](Arrays/Concatenation_of_Array.py)  
+* [Concatenation of Array](/Arrays/Concatenation_of_Array.py)  
 * Contains Duplicate  
 * Valid Anagram  
 * Two Sum  
