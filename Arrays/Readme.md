@@ -45,5 +45,5 @@
 
 <p align="center">
   <!-- A festive confetti burst at the end -->
-  <img src="https://media.giphy.com/media/3o6Mbbs879ozZ9Yic0/giphy.gif" width="150" alt="confetti" />
+  <img src="https://media.giphy.com/media/3o6Mbbs879ozZ9Yic0/giphy.gif" width="200" alt="confetti" />
 </p>
