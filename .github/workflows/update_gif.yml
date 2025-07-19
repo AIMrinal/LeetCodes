@@ -3,7 +3,7 @@ name: Update LeetCode Progress GIF
 on:
   push:
     paths:
-      - 'DashboardScripts/generate_progress_gif.py'
+      - 'DashboardScript/generate_progress_gif.py'
       - 'progress.json'
       - 'README.md'
 
