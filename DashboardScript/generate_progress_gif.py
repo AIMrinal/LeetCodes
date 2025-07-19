@@ -1,35 +1,33 @@
-from manim import *
 import json
+import matplotlib.pyplot as plt
+from celluloid import Camera
 
-class LeetCodeRace(Scene):
-    def construct(self):
-        with open("progress.json") as f:
-            data = json.load(f)
+# Load progress from JSON
+with open('progress.json', 'r') as f:
+    data = json.load(f)
 
-        categories = list(data.items())
-        max_val = max(v for _, v in categories)
+categories = list(data.keys())
+final_counts = list(data.values())
+problems_solved = [0] * len(categories)
 
-        bars = []
-        cars = []
+fig, ax = plt.subplots(figsize=(12, 7))
+camera = Camera(fig)
 
-        title = Text("LeetCode Progress", font_size=48, color=WHITE).to_edge(UP)
-        self.add(title)
+for step in range(1, max(final_counts) + 1):
+    for i in range(len(problems_solved)):
+        if problems_solved[i] < final_counts[i]:
+            problems_solved[i] += 1
+    ax.clear()
+    bars = ax.barh(categories, problems_solved, color='mediumslateblue')
+    ax.set_xlim(0, max(final_counts) + 5)
+    ax.set_title(f'🏁 LeetCode Progress Race! 🧠🔥 Total Solved: {sum(problems_solved)}', fontsize=16)
+    ax.set_xlabel("Problems Solved")
 
-        for i, (cat, val) in enumerate(categories):
-            y = 3 - i * 0.9  # Vertical spacing
-            label = Text(cat, font_size=28, color=WHITE).move_to(LEFT * 5.5 + UP * y)
-            bar = Rectangle(width=0.2, height=0.4, color=BLUE, fill_opacity=1).move_to(LEFT * 4 + UP * y)
-            car = Text("🏎️", font_size=36).next_to(bar, RIGHT, buff=0.2)
+    # Add racecar emoji 🏎️ at the tip of each bar
+    for i, value in enumerate(problems_solved):
+        ax.text(value + 0.5, i, "🏎️", va='center', fontsize=16)
 
-            self.add(label, bar, car)
-            bars.append((bar, val))
-            cars.append(car)
+    camera.snap()
 
-        self.wait(1)
-
-        for (bar, val), car in zip(bars, cars):
-            new_width = 9 * (val / max_val)
-            self.play(bar.animate.stretch_to_fit_width(new_width), run_time=val * 0.05)
-            self.play(car.animate.move_to(bar.get_right() + RIGHT * 0.5), run_time=0.2)
-
-        self.wait(2)
+animation = camera.animate(interval=200)
+animation.save('leetcode_progress.gif', writer='pillow')
