@@ -14,10 +14,12 @@ class LeetCodeRace(Scene):
         labels = []
 
         for i, (cat, val) in enumerate(categories):
-            y = 3 - i
+            y = 3 - i * 0.7  # Spaced rows more evenly
             bar = Rectangle(width=0.01, height=0.3, color=BLUE).move_to(LEFT * 5 + UP * y)
-            car = Text("🏎️", font_size=30).next_to(bar, RIGHT)
-            label = Text(cat, font_size=24).next_to(bar, LEFT).shift(LEFT * 0.5)
+            car = Text("🏎️", font_size=30).next_to(bar, RIGHT, buff=0.3)
+            label = Text(cat, font_size=24).next_to(bar, LEFT, buff=0.5)
+            label.align_to(bar, DOWN)  # Align label to the bar's baseline
+
             self.add(bar, car, label)
             bars.append((bar, val))
             cars.append(car)
