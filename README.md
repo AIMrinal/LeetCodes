@@ -223,7 +223,7 @@ This repo tracks my journey solving algorithm and data structure problems across
 ## 📈 GitHub Contribution Graph
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Mrinal1918&theme=tokyonight&hide_border=true" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AIMrinal&theme=tokyonight&hide_border=true" />
 </p>
 
 ---
