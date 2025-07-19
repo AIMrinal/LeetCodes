@@ -11,23 +11,24 @@ class LeetCodeRace(Scene):
 
         bars = []
         cars = []
-        labels = []
+
+        title = Text("LeetCode Progress", font_size=48, color=WHITE).to_edge(UP)
+        self.add(title)
 
         for i, (cat, val) in enumerate(categories):
-            y = 3 - i * 0.7  # Spaced rows more evenly
-            bar = Rectangle(width=0.01, height=0.3, color=BLUE).move_to(LEFT * 5 + UP * y)
-            car = Text("🏎️", font_size=30).next_to(bar, RIGHT, buff=0.3)
-            label = Text(cat, font_size=24).next_to(bar, LEFT, buff=0.5)
-            label.align_to(bar, DOWN)  # Align label to the bar's baseline
+            y = 3 - i * 0.9  # Vertical spacing
+            label = Text(cat, font_size=28, color=WHITE).move_to(LEFT * 5.5 + UP * y)
+            bar = Rectangle(width=0.2, height=0.4, color=BLUE, fill_opacity=1).move_to(LEFT * 4 + UP * y)
+            car = Text("🏎️", font_size=36).next_to(bar, RIGHT, buff=0.2)
 
-            self.add(bar, car, label)
+            self.add(label, bar, car)
             bars.append((bar, val))
             cars.append(car)
 
         self.wait(1)
 
         for (bar, val), car in zip(bars, cars):
-            new_width = 10 * (val / max_val)
+            new_width = 9 * (val / max_val)
             self.play(bar.animate.stretch_to_fit_width(new_width), run_time=val * 0.05)
             self.play(car.animate.move_to(bar.get_right() + RIGHT * 0.5), run_time=0.2)
 
