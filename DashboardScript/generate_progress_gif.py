@@ -2,19 +2,22 @@ import json
 import matplotlib.pyplot as plt
 from celluloid import Camera
 
-# ✅ Set emoji-compatible font
 plt.rcParams['font.family'] = 'DejaVu Sans'
 
-# Load progress from JSON
 with open('progress.json', 'r') as f:
     data = json.load(f)
 
 categories = list(data.keys())
 final_counts = list(data.values())
+
+# ✅ Safety check
+if not categories or max(final_counts) == 0:
+    raise ValueError("No progress data found in progress.json or all values are 0.")
+
 problems_solved = [0] * len(categories)
 
 fig, ax = plt.subplots(figsize=(12, 7))
-plt.subplots_adjust(left=0.3)  # ✅ More space for category labels
+plt.subplots_adjust(left=0.3)
 camera = Camera(fig)
 
 for step in range(1, max(final_counts) + 1):
@@ -27,11 +30,12 @@ for step in range(1, max(final_counts) + 1):
     ax.set_title(f'🏁 LeetCode Progress Race! 🧠🔥 Total Solved: {sum(problems_solved)}', fontsize=16)
     ax.set_xlabel("Problems Solved")
 
-    # 🏎️ Add racecar emoji at the bar tips
     for i, value in enumerate(problems_solved):
         ax.text(value + 0.5, i, "🏎️", va='center', fontsize=16)
 
     camera.snap()
 
 animation = camera.animate(interval=200)
+
+# ✅ Final save
 animation.save('leetcode_progress.gif', writer='pillow')
