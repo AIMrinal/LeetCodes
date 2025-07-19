@@ -1,29 +1,32 @@
+from manim import *
 import json
-import matplotlib.pyplot as plt
-from celluloid import Camera
 
-# Load progress from JSON
-with open('progress.json', 'r') as f:
-    data = json.load(f)
+class LeetCodeRace(Scene):
+    def construct(self):
+        with open("progress.json") as f:
+            data = json.load(f)
 
-categories = list(data.keys())
-final_counts = list(data.values())
-problems_solved = [0] * len(categories)
+        categories = list(data.items())
+        max_val = max(v for _, v in categories)
 
-fig, ax = plt.subplots(figsize=(10, 6))
-camera = Camera(fig)
+        bars = []
+        cars = []
+        labels = []
 
-# Animate
-for step in range(1, max(final_counts) + 1):
-    for i in range(len(problems_solved)):
-        if problems_solved[i] < final_counts[i]:
-            problems_solved[i] += 1
-    bars = ax.bar(categories, problems_solved, color='mediumslateblue')
-    ax.bar_label(bars, padding=3)
-    ax.set_ylim(0, max(final_counts) + 5)
-    ax.set_title(f'🚀 LeetCode Progress - Total Solved: {sum(problems_solved)}', fontsize=16)
-    ax.set_ylabel("Problems Solved")
-    camera.snap()
+        for i, (cat, val) in enumerate(categories):
+            y = 3 - i
+            bar = Rectangle(width=0.01, height=0.3, color=BLUE).move_to(LEFT * 5 + UP * y)
+            car = Text("🏎️", font_size=30).next_to(bar, RIGHT)
+            label = Text(cat, font_size=24).next_to(bar, LEFT).shift(LEFT * 0.5)
+            self.add(bar, car, label)
+            bars.append((bar, val))
+            cars.append(car)
 
-animation = camera.animate(interval=200)
-animation.save('leetcode_progress.gif', writer='pillow')
+        self.wait(1)
+
+        for (bar, val), car in zip(bars, cars):
+            new_width = 10 * (val / max_val)
+            self.play(bar.animate.stretch_to_fit_width(new_width), run_time=val * 0.05)
+            self.play(car.animate.move_to(bar.get_right() + RIGHT * 0.5), run_time=0.2)
+
+        self.wait(2)
