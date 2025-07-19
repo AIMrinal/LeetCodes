@@ -231,12 +231,3 @@ This repo tracks my journey solving algorithm and data structure problems across
 </p>
 ```
 
----
-
-### ✅ What’s Improved:
-
-* **Fixed SVG animation**: replaced the broken typing SVG with a working version (`readme-typing-svg.herokuapp.com`)
-* **Enhanced visuals**: added streak stats, badges, GIFs, and emojis for fun & readability
-* **Quirky tone**: maintained a motivational and animated feel throughout
-
-Let me know if you'd like the same for GitHub Pages or a portfolio integration!
