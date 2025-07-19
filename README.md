@@ -150,12 +150,12 @@ This repo tracks my journey solving algorithm and data structure problems across
 | ------------------- | ---- | --------------- |
 | Binary Search       | 🟦   | 12              |
 | [Arrays](Arrays/Readme.md)              | 🟨   | 35              |
-| Dynamic Programming | 🟥   | 18              |
+| Dynamic Programming | 🟥   | 19              |
 | Two Pointers        | 🟧   | 8               |
 | Linked List         | 🟫   | 10              |
 | Stack               | 📦   | 1               |
 | Binary Tree         | 🌳   | 9               |
-| **Total**           | 🔢   | **93** 🎯       |
+| **Total**           | 🔢   | **94** 🎯       |
 
 ---
 
