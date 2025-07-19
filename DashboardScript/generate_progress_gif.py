@@ -2,8 +2,8 @@ import json
 import matplotlib.pyplot as plt
 from celluloid import Camera
 
-# Use a font that contains color emoji glyphs
-plt.rcParams['font.family'] = 'Noto Color Emoji'
+# Use a monochrome TrueType emoji font that Pillow/Matplotlib can load
+plt.rcParams['font.family'] = 'Symbola'
 
 with open('progress.json', 'r') as f:
     data = json.load(f)
@@ -26,10 +26,10 @@ for step in range(1, max(final_counts) + 1):
         if problems_solved[i] < final_counts[i]:
             problems_solved[i] += 1
 
-    bars = ax.barh(categories, problems_solved, color='mediumslateblue')
+    ax.barh(categories, problems_solved, color='mediumslateblue')
     ax.set_xlim(0, max(final_counts) + 5)
     ax.set_title(
-        f'🏁 LeetCode Progress Race! 🧠🔥 Total Solved: {sum(problems_solved)}',
+        f'🏁 LeetCode Progress Race! 🏎️ Total Solved: {sum(problems_solved)}',
         fontsize=16
     )
     ax.set_xlabel("Problems Solved")
@@ -40,5 +40,5 @@ for step in range(1, max(final_counts) + 1):
     camera.snap()
 
 animation = camera.animate(interval=200)
-# Use ImageMagick writer to preserve true-color & emoji
+# 'imagemagick' writer preserves the full RGB frames, but with Symbola you'll at least get the car glyph
 animation.save('leetcode_progress.gif', writer='imagemagick')
