@@ -8,35 +8,37 @@ on:
       - 'README.md'
 
 permissions:
-  contents: write  # Required to allow git push
+  contents: write
 
 jobs:
   generate-gif:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Manim & FFmpeg
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Manim system dependencies
         run: |
           sudo apt update
-          sudo apt install ffmpeg -y
-          pip install manim
+          sudo apt install -y libcairo2-dev libpango1.0-dev ffmpeg
 
-      - name: Generate video using Manim
-        run: |
-          manim -pql DashboardScript/generate_progress_gif.py LeetCodeRace
+      - name: Install Python dependencies
+        run: pip install manim
 
-      - name: Convert to GIF
+      - name: Generate progress video and convert to GIF
         run: |
-          mkdir -p output
-          ffmpeg -y -i media/videos/DashboardScript/generate_progress_gif/480p15/LeetCodeRace.mp4 output/leetcode_progress.gif
+          manim -pql DashboardScript/generate_progress_gif.py LeetCodeProgressRace
+          ffmpeg -i media/videos/DashboardScript/1080p60/LeetCodeProgressRace.mp4 -vf "fps=10,scale=600:-1:flags=lanczos" leetcode_progress.gif
 
       - name: Commit and push updated gif
         run: |
           git config --global user.name "LeetCode Bot"
           git config --global user.email "bot@example.com"
-          git add output/leetcode_progress.gif
+          git add leetcode_progress.gif
           git commit -m "🤖 Auto-update LeetCode progress GIF" || echo "No changes to commit"
           git push
