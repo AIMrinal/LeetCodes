@@ -45,7 +45,7 @@ This repo tracks my journey solving algorithm and data structure problems across
 │   └── same-tree.py
 ...
 ---
-
+```
 ## 📁 Problem Categories & Progress
 
 ### 🟦 1. Binary Search (12 Problems)
