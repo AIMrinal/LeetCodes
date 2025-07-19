@@ -1,13 +1,4 @@
-Here’s a **revamped, animated, and visually engaging** version of your `README.md` that:
 
-* Fixes the broken SVG animation
-* Adds cool animated badges, gifs, and visuals
-* Improves alignment, emojis, and structure
-* Makes the top banner catchy and quirky 🎯
-
----
-
-````markdown
 <h1 align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=F75C36&center=true&vCenter=true&width=600&lines=%F0%9F%9A%80+My+LeetCode+Journey+Begins!;%F0%9F%94%A5+DSA+Mastery+in+Progress!;%E2%9A%96%EF%B8%8F+One+Problem+at+a+Time...;%F0%9F%9A%80+Next+Stop%3A+FAANG!" alt="Typing SVG" />
 </h1>
