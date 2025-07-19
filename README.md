@@ -149,7 +149,7 @@ This repo tracks my journey solving algorithm and data structure problems across
 | Category            | Icon | Problems Solved |
 | ------------------- | ---- | --------------- |
 | Binary Search       | 🟦   | 12              |
-| Arrays              | 🟨   | 35              |
+| [Arrays](Arrays/Readme.md)              | 🟨   | 35              |
 | Dynamic Programming | 🟥   | 18              |
 | Two Pointers        | 🟧   | 8               |
 | Linked List         | 🟫   | 10              |
