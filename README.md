@@ -11,7 +11,7 @@
   <a href="https://leetcode.com/u/Mrinal1918" target="_blank">
     <img src="https://img.shields.io/badge/LeetCode-Profile-orange?style=for-the-badge&logo=leetcode" />
   </a>
-  <img src="https://img.shields.io/badge/Problems%20Solved-93-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Problems%20Solved-94-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Daily%20Commit-On🔥-green?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Consistency-100%25-yellow?style=for-the-badge&logo=target" />
 </p>
