@@ -11,7 +11,7 @@
 * [Contains Duplicate](/Arrays/Contains_Duplicate.py)  
 * [Valid Anagram](/Arrays/Valid_Anagram.py)  
 * [Two Sum](/Arrays/Two_Sum.py)  
-* Longest Common Prefix  
+* [Longest Common Prefix](/Arrays/Longest_Common_Prefix.py)  
 * Remove Element  
 * Majority Element  
 * Design HashSet  
