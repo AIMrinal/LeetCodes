@@ -10,7 +10,7 @@
 * [Concatenation of Array](/Arrays/Concatenation_of_Array.py)  
 * [Contains Duplicate](/Arrays/Contains_Duplicate.py)  
 * [Valid Anagram](/Arrays/Valid_Anagram.py)  
-* Two Sum  
+* [Two Sum](/Arrays/Two_Sum.py)  
 * Longest Common Prefix  
 * Remove Element  
 * Majority Element  
