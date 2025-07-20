@@ -5,7 +5,7 @@
   <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTZ4cjIxbzF3M2swNGVqcWp0eGNueG8wdGc0bnIwdHhxcDFvbTU0cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6FWpozKBgrQD4MZwDC/giphy.gif" width="200" alt="rocket launch" />
 </p>
 
-### 🟨 Arrays (35 Problems) 
+### 🟨 Problems (35 Solved) :
 
 * [Concatenation of Array](/Arrays/Concatenation_of_Array.py)  
 * Contains Duplicate  
