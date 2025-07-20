@@ -12,7 +12,7 @@
 * [Valid Anagram](/Arrays/Valid_Anagram.py)  
 * [Two Sum](/Arrays/Two_Sum.py)  
 * [Longest Common Prefix](/Arrays/Longest_Common_Prefix.py)  
-* Remove Element  
+* [Remove Element](/Arrays/Remove_Element.py)  
 * Majority Element  
 * Design HashSet  
 * Design HashMap  
