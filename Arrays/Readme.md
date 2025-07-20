@@ -8,7 +8,7 @@
 ### 🟨 Problems (35 Solved) :
 
 * [Concatenation of Array](/Arrays/Concatenation_of_Array.py)  
-* Contains Duplicate  
+* [Contains Duplicate](/Arrays/Contains_Duplicate.py)  
 * Valid Anagram  
 * Two Sum  
 * Longest Common Prefix  
