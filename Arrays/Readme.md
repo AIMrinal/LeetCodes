@@ -35,7 +35,7 @@
 | [Spiral Matrix](/Arrays/Spiral_Matrix.py)                                 |   Medium   | Simulation, matrix traversal                   |
 | [Rotate Image](/Arrays/Rotate_Image.py)                                   |   Medium   | In-place matrix transpose + reverse rows       |
 | [Word Search](/Arrays/Word_Search.py)                                     |   Medium   | Backtracking (DFS)                             |
-| [Longest Consecutive Sequence](/Arrays/Longest_Consecutive_Sequence.py)   |    Hard    | Hash set, Union–Find                            |
+| [Longest Consecutive Sequence](/Arrays/Longest_Consecutive_Sequence.py)   |    Medium   | Hash set, Union–Find                            |
 | [Subsets](/Arrays/Subsets.py)                                             |   Medium   | Backtracking                                   |
 | [Subsets II](/Arrays/Subsets_II.py)                                       |   Medium   | Backtracking with duplicate-handling           |
 | [Permutations](/Arrays/Permutations.py)                                   |   Medium   | Backtracking                                   |
